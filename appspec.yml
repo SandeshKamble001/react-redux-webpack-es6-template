@@ -1,0 +1,22 @@
+version: 0.0
+
+os: linux
+
+files:
+  - source: dist
+
+    destination: /home/ubuntu/redux-todo-app/releases/new
+
+hooks:
+
+ BeforeInstall:
+
+   - location: scripts/before-install.sh
+
+     runas: root
+
+AfterInstall:
+
+   - location: scripts/after-install.sh
+
+     runas: root
